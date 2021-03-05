@@ -1,7 +1,8 @@
-site_name: ebook
+# TODO replace name with name of ebook: 101: Intro to Web, 411: Front-Ends with React...etc
+site_name: ebook-name
 
-# run `mkdocs build` to build the static files into "/site"
-# run `mkdocs serve` to serve those files on port 8000
+# TODO run `mkdocs build` to build the static files into "/site"
+# TODO run `mkdocs serve` to serve those files on port 8000
 
 # defines where the markdown to build from
 # docs_dir: 'test-node-book'
@@ -11,15 +12,65 @@ site_name: ebook
 
 # "pages" has been deprecated
 # use this to create the nav bar on the left-side of the window view
+# TODO replace all CAPITALIZED words with appropriate titles
+
 nav:
-    - Home: index.md
-    - About: about.md
+    - Home: 'index.md'
+    - 'Module One: TITLE':
+      - 'Pre-Class 1 Lessons': 
+        - Intro to Material-Mkdocs: module-1/pre-class-lessons/lessonOutlineTemplate.md
+        - LESSON TITLE: module-1/pre-class-lessons/lessonOutlineTemplate.md
+        - LESSON TITLE: module-1/pre-class-lessons/lessonOutlineTemplate.md
+        - Class 1 TITLE: module-1/class-plans/classOutlineTemplate.md
+      - 'Pre-Class 2 Lesson': 
+        - LESSON TITLE: module-1/pre-class-lessons/lessonOutlineTemplate.md
+        - LESSON TITLE: module-1/pre-class-lessons/lessonOutlineTemplate.md
+        - LESSON TITLE: module-1/pre-class-lessons/lessonOutlineTemplate.md
+        - Class 2 TITLE: module-1/class-plans/classOutlineTemplate.md
+    - 'Module Two: TITLE': 
+      - 'Pre-Class 5 Lessons': 
+        - LESSON TITLE: module-2/pre-class-lessons/lessonOutlineTemplate.md
+        - LESSON TITLE: module-2/pre-class-lessons/lessonOutlineTemplate.md
+        - LESSON TITLE: module-2/pre-class-lessons/lessonOutlineTemplate.md
+        - Class 5 TITLE: module-2/class-plans/classOutlineTemplate.md
+      - 'Pre-Class 6 Lessons': 
+        - LESSON TITLE: module-2/pre-class-lessons/lessonOutlineTemplate.md
+        - LESSON TITLE: module-2/pre-class-lessons/lessonOutlineTemplate.md
+        - LESSON TITLE: module-2/pre-class-lessons/lessonOutlineTemplate.md 
+        - Class 6 TITLE: module-2/class-plans/classOutlineTemplate.md
+
+
 
 # defines the styles, usually just a single name but `custom_dir` overrides this behavior
 theme:
   name: null
   custom_dir: mkdocs-material/material
+  palette:
+    scheme: slate
+    primary: black
+    accent: deep orange
+    # Defines the logo in the top-left, file must be in the /doc directory
+  logo: CE_WhiteBlue_Icon.png
+  
+  # ? Not rendering as expected??
+  extra:
+    copyright: Copyright &copy; 2013 - 2021 Austin Coding Academy
+    social:
+      - icon: fontawesome/brands/github
+        link: https://github.com/AustinCodingAcademy
+      - icon: fontawesome/brands/medium
+        link: https://medium.com/@austincoding
+      - icon: fontawesome/brands/linkedin
+        link: https://www.linkedin.com/school/austincodingacademy/
+      - icon: fontawesome/brands/instagram
+        link: https://www.instagram.com/austincodingacademy
+      - icon: fontawesome/brands/twitter
+        link: https://twitter.com/austincoding
+      - icon: fontawesome/brands/facebook
+        link: https://www.facebook.com/AustinCodingAcademy/
 
+
+  
   # 404 page
   static_templates:
     - 404.html
@@ -36,3 +87,29 @@ theme:
   favicon: assets/favicon.png
   icon:
     logo: logo
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      linenums: true
+      linenums_style: pymdownx.inline
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - attr_list
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid-experimental
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      clickable_checkbox: true
+  - def_list
+  - pymdownx.tabbed
+
+
+ 
+
+# Can add icons throughout the ebook https://materialdesignicons.com/
+#  - pymdownx.inlinehilite
+  # - pymdownx.keys

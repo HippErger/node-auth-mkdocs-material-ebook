@@ -22,4 +22,10 @@ on start script - cd into ebook, run python for `mkdocs build`
 
 to deploy
 
-build
+mkdocs build
+mkdocs serve to test
+cd ..
+git status, add, commit, push
+[In Heroku or other you'll need to setup environment variable using the CLI or the dashboard](https://devcenter.heroku.com/articles/config-vars)
+
+How to install Python and pip instructions here:
