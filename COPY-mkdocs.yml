@@ -1,0 +1,38 @@
+site_name: ebook
+
+# run `mkdocs build` to build the static files into "/site"
+# run `mkdocs serve` to serve those files on port 8000
+
+# defines where the markdown to build from
+# docs_dir: 'test-node-book'
+
+# defines where to put the generated static files
+# site_dir: 'docs'
+
+# "pages" has been deprecated
+# use this to create the nav bar on the left-side of the window view
+nav:
+    - Home: index.md
+    - About: about.md
+
+# defines the styles, usually just a single name but `custom_dir` overrides this behavior
+theme:
+  name: null
+  custom_dir: mkdocs-material/material
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Necessary for search to work properly
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
