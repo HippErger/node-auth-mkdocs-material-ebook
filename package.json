@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "cd ebook-folder && mkdocs build",
     "start": "nodemon index.js",
-    "heroku-postbuild": "nodemon index.js"
+    "heroku-postbuild": "cd ebook-folder && mkdocs build"
   },
   "repository": {
     "type": "git",
