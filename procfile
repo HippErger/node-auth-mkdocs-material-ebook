@@ -1,2 +1,2 @@
 web: node index.js
-pipinstall: pip install -r requirements.txt && cd ebook-folder && mkdocs build
+pipinstall: pip install -r requirements.txt
