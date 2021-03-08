@@ -1,1 +1,0 @@
-installBuild: cd ebook-folder && mkdocs build
