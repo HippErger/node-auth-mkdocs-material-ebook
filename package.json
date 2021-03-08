@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "pip install -r requirements.txt && cd ebook-folder && mkdocs build",
-    "start": "pip install -r requirements.txt && cd ebook-folder && mkdocs build && cd .. && nodemon index.js"
+    "heroku-postbuild": "pip install -r requirements.txt && cd ebook-folder && mkdocs build",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
