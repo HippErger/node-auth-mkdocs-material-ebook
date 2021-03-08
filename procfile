@@ -1,1 +1,1 @@
-web: node index.js
+installBuild: cd ebook-folder && mkdocs build
